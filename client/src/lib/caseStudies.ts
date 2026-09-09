@@ -1,3 +1,12 @@
+import amazonEbookProduction from "@/lib/images/amazon-ebook-production.png";
+import xmlMarkupStructuredContent from "@/lib/images/xml-markup-structured-content.png";
+import aeroboticsOrchardMapping from "@/lib/images/aerobotics-orchard-mapping.png";
+import pollSurveyResearchProcessing from "@/lib/images/poll-survey-research-processing.png";
+import facialImpressionSurvey from "@/lib/images/facial-impression-survey.png";
+import patientCareFeedbackDigitization from "@/lib/images/patient-care-feedback-digitization.png";
+import firstPersonPovDataCapture from "@/lib/images/first-person-pov-data-capture.png";
+import lidar3dPointCloudAnnotation from "@/lib/images/lidar-3d-point-cloud-annotation.png";
+
 export type CaseStudy = {
   slug: string;
   title: string;
@@ -19,7 +28,7 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Engineering complex fixed-layout content for an enhanced digital reading experience.",
     category: "Digital Publishing",
     client: "Amazon eBook production ecosystem",
-    image: "/manus-storage/AmazoneBookProductionFLHT,FLTP&ArabicBooks_e7adfd70.png",
+    image: amazonEbookProduction,
     overview: ["CyberData India supported specialized conversion and digital publishing for complex fixed-layout titles, including Fixed Layout Hidden Text, Fixed Layout Text Popups, and Arabic fixed-layout eBooks.", "The engagement required visually complex source books to become high-quality digital editions while preserving the appearance, structure, reading sequence, and experience of the original publication."],
     challenge: ["Maintaining the original visual identity while adding a machine-readable text layer", "Positioning interactive popup regions precisely across complex illustrated layouts", "Preserving Arabic Unicode, right-to-left reading order, character shaping, and mixed-language content", "Validating the package visually and functionally across reading devices"],
     solution: ["Text extraction, proofreading, hidden-text mapping, and reading-order validation", "Fixed-layout page engineering with interactive text regions and popup linking", "XML/HTML markup, Unicode processing, RTL sequencing, and multilingual layout handling", "Device-level testing, visual quality assurance, and final package validation"],
@@ -32,7 +41,7 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Transforming unstructured documents into intelligent, reusable digital content.",
     category: "Content Transformation",
     client: "Publishers, archives, and knowledge platforms",
-    image: "/manus-storage/XMLMarkup&StructuredContentTransformation_1690703e.png",
+    image: xmlMarkupStructuredContent,
     overview: ["CyberData India converts books, journals, publications, archival documents, and other content into structured XML-based digital assets.", "The purpose is not simply to digitize text, but to identify semantic structure so content can be searched, reused, republished, exchanged, and processed programmatically."],
     challenge: ["Interpreting hierarchy and semantic meaning inside unstructured or semi-structured files", "Preserving tables, figures, captions, footnotes, references, and cross-links", "Handling special characters, metadata, and client-specific publishing rules", "Producing consistently valid XML against required schemas or DTDs"],
     solution: ["Source analysis, OCR, text extraction, cleansing, and structural identification", "XML tagging, metadata creation, and hierarchical content structuring", "Markup of tables, figures, notes, references, and cross-reference links", "DTD/schema validation, automated checks, and multi-level human QA"],
@@ -45,7 +54,7 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Transforming aerial agricultural imagery into AI-ready orchard intelligence.",
     category: "Computer Vision",
     client: "Aerobotics / agricultural AI initiative",
-    image: "/manus-storage/AeroboticsOrchardMappingUsingDroneImagery_81e5c41c.png",
+    image: aeroboticsOrchardMapping,
     overview: ["CyberData India participated in an agricultural AI/ML initiative involving high-resolution drone imagery of orchards.", "Aerial images were processed to identify and map individual plants and trees, creating structured datasets for orchard mapping and plant-health analysis."],
     challenge: ["Overlapping trees and dense vegetation", "Changing lighting, shadows, species, seasons, health, and growth stages", "Reliable identification of individual plants across large high-resolution images", "Preparing consistent labels for downstream machine-learning workflows"],
     solution: ["Processed and organized high-resolution drone imagery", "Identified and mapped individual orchard plants and trees", "Performed image-level analysis, classification, and visual indicator review", "Prepared structured training datasets with quality validation"],
@@ -58,7 +67,7 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Turning complex survey material into structured research intelligence.",
     category: "Research Data",
     client: "Renowned university, USA",
-    image: "/manus-storage/PollSurveyAnalysis&ResearchDataProcessing_63378b85.png",
+    image: pollSurveyResearchProcessing,
     overview: ["CyberData India processes complex polling and public-opinion survey documents for a renowned university in the United States.", "Questionnaires, response distributions, demographic conditions, and research notes are transformed into standardized, searchable, analysis-ready datasets."],
     challenge: ["Different survey structures and layouts across a large collection", "Counts, percentages, multiple-response questions, and subpopulation conditions", "Missing or excluded responses and complex response-code mappings", "Preserving statistical meaning, contextual notes, and consistency"],
     solution: ["Questionnaire interpretation, question extraction, and response processing", "Frequency, percentage, count, multiple-response, and code-map validation", "Subpopulation identification and contextual note capture", "Structured JSON preparation, automated validation, and multi-level human QA"],
@@ -71,7 +80,7 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Capturing first impressions and analysing facial responses for research insights.",
     category: "Human Preference Data",
     client: "Behavioural research engagement",
-    image: "/manus-storage/FacialImpressionSurvey_173557bc.png",
+    image: facialImpressionSurvey,
     overview: ["CyberData India executed a specialized facial-impression survey designed to capture how participants perceive and respond to facial characteristics presented through visual stimuli.", "The resulting information represents subjective human judgment and therefore required controlled presentation, participant coordination, and consistent collection methods."],
     challenge: ["Presentation order and visual context could influence participant judgment", "Question interpretation had to remain consistent", "Subjective responses required a disciplined and unbiased collection process", "The final dataset needed validation, cleaning, and analytical structure"],
     solution: ["Participant coordination and controlled presentation of facial stimuli", "Survey administration and independent human-response collection", "Response validation, consistency checks, and data cleaning", "Structured dataset preparation, quality control, and final delivery"],
@@ -84,7 +93,7 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Converting paper feedback into structured, actionable healthcare data.",
     category: "Healthcare Digitization",
     client: "UK-based healthcare services firm",
-    image: "/manus-storage/DigitizationofPatientCareFeedbackForms_e7ac3ac4.png",
+    image: patientCareFeedbackDigitization,
     overview: ["CyberData India supports the digitization and structured processing of patient-care feedback forms for a UK-based firm.", "Printed, scanned, handwritten, checkbox, rating, and free-text feedback is converted into searchable, analysis-ready data while preserving the original patient response."],
     challenge: ["Mixed printed and handwritten information", "Checkboxes, ratings, free text, and partially completed fields", "Inconsistent handwriting and different form layouts", "Ambiguous information requiring human interpretation and exception handling"],
     solution: ["Document and image preparation with OCR-assisted extraction", "Handwritten information, checkbox, rating, and free-text capture", "Manual verification, normalization, and structured database preparation", "Exception handling and quality assurance for unclear content"],
@@ -97,7 +106,7 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Capturing the physical world from a human perspective to train the next generation of AI.",
     category: "Embodied AI",
     client: "Robotics and physical-AI programs",
-    image: "/manus-storage/First-PersonPOVDataCaptureforRobotics&EmbodiedAI_285c3120.png",
+    image: firstPersonPovDataCapture,
     overview: ["CyberData India has developed operational capabilities for collecting first-person or egocentric video for robotics, computer vision, and embodied-AI applications.", "Participants perform real-world activities while wearable or head-mounted devices capture what they see, reach for, interact with, and do next."],
     challenge: ["Recruiting and coordinating participants across representative environments", "Maintaining consistent device setup, task execution, and recording quality", "Capturing natural interactions while preserving detailed activity metadata", "Managing exceptions, recollection, and scalable production quality"],
     solution: ["Participant recruitment, environment validation, device setup, and task assignment", "First-person video and synchronized audio capture in real-world scenarios", "Task, temporal, object-interaction, action, and environmental metadata", "Upload review, exception/recollection management, QA, and dataset delivery"],
@@ -110,7 +119,7 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Building spatial intelligence for autonomous vehicles, robotics, and physical AI.",
     category: "3D Annotation",
     client: "Autonomous and robotic perception programs",
-    image: "/manus-storage/LiDAR&3DPointCloudAnnotation_16f5941f.png",
+    image: lidar3dPointCloudAnnotation,
     overview: ["CyberData India supports LiDAR and 3D point-cloud annotation workflows that transform raw spatial sensor data into structured training datasets for AI perception models.", "The work helps models understand what an object is, where it is, its dimensions and orientation, and how it relates to and moves through a three-dimensional environment."],
     challenge: ["Point clouds represent complex three-dimensional spaces rather than flat imagery", "Object dimensions, orientation, occlusion, and classification require precision", "Tracking must remain consistent across consecutive frames", "Sensor-fusion projects require alignment between LiDAR and camera data"],
     solution: ["3D cuboids, point-cloud labels, object detection, and classification", "Semantic and instance segmentation", "Multi-frame tracking, trajectory, orientation, and continuity validation", "LiDAR-camera sensor fusion, QA validation, and dataset export"],
