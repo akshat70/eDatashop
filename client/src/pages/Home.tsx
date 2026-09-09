@@ -29,50 +29,50 @@ const services = [
   {
     number: "01",
     icon: FileText,
-    title: "Data entry",
+    title: "AI Annotation",
     description:
-      "Accurate manual and automated entry for documents, forms, catalogs, and everything in between.",
-    tag: "Capture",
+      "Human-reviewed labeling and structured extraction for training data, documents, forms, and knowledge workflows.",
+    tag: "Label",
   },
   {
     number: "02",
-    icon: Database,
-    title: "Data processing",
+    icon: ScanLine,
+    title: "Enterprise Document Digitization & OCR",
     description:
-      "Structure, sort, validate, and enrich large datasets so teams can make decisions with confidence.",
-    tag: "Structure",
+      "Scan, classify, extract, and enrich paper and digital records into searchable, enterprise-ready information.",
+    tag: "Digitize",
   },
   {
     number: "03",
-    icon: ScanLine,
-    title: "Digitization",
+    icon: Database,
+    title: "Data Conversion & Content Transformation",
     description:
-      "Transform paper archives, scans, and PDFs into searchable, usable digital records.",
-    tag: "Convert",
+      "Convert legacy files, PDFs, and unstructured content into clean, standardized formats your team can actually use.",
+    tag: "Transform",
   },
   {
     number: "04",
     icon: FileCheck2,
-    title: "Quality assurance",
+    title: "AI Model Evaluation",
     description:
-      "Human-led review and validation layers that protect the integrity of every important record.",
-    tag: "Validate",
+      "Measure output quality, detect weak spots, and validate model performance with domain-aware QA and review.",
+    tag: "Assess",
   },
   {
     number: "05",
     icon: BarChart3,
-    title: "AI data services",
+    title: "LLM Data",
     description:
-      "Annotation and evaluation workflows that give AI teams the high-quality signal they need.",
-    tag: "Train",
+      "Build instruction, preference, and evaluation datasets that improve quality, consistency, and model alignment.",
+    tag: "Tune",
   },
   {
     number: "06",
     icon: ShieldCheck,
-    title: "Secure operations",
+    title: "AI for Cultural Heritage",
     description:
-      "Reliable processes built around confidentiality, controlled access, and compliance-minded delivery.",
-    tag: "Protect",
+      "Preserve archives, collections, and historical records with careful digitization, access, and contextual enrichment.",
+    tag: "Preserve",
   },
 ];
 
@@ -83,6 +83,7 @@ const industries = [
   ["Retail", "Catalogs, orders, customer data"],
   ["Publishing", "Books, archives, metadata"],
   ["Legal", "Contracts, discovery, case files"],
+  ["Automotive", "Vehicle records, maintenance logs, compliance"]
 ];
 
 const processSteps = [
@@ -142,7 +143,6 @@ function InteractiveHeroGraphic() {
         </g>
         <g className="signal-axis"><circle cx="62" cy="124" r="4" /><circle cx="509" cy="155" r="4" /><circle cx="509" cy="374" r="4" /></g>
       </svg>
-      <div className="graphic-micro-label micro-top mono-label">LIVE DATA LAYER / 001</div>
       <div className="graphic-micro-label micro-bottom mono-label">MOVE TO EXPLORE</div>
       <div className="graphic-node node-input" style={{ transform: `translate(${(pointer.x - 50) * -0.06}px, ${(pointer.y - 50) * -0.06}px)` }}>
         <span className="node-icon"><FileText size={15} /></span>
@@ -203,7 +203,7 @@ export default function Home() {
               <button className="button button-primary" onClick={() => navigate("/contact-us")}>
                 Start a conversation <ArrowUpRight size={17} />
               </button>
-              <button className="text-link" onClick={() => navigate("/about-us")}>
+              <button className="text-link" onClick={() => navigate("/overview")}>
                 Know more about us <MoveRight size={17} />
               </button>
             </div>
@@ -227,7 +227,6 @@ export default function Home() {
             <div className="hero-visual">
               <img src={heroImage} alt="Abstract illustration of documents becoming structured data" />
               <InteractiveHeroGraphic />
-              <div className="visual-corner visual-corner-tl mono-label">EDS / 001</div>
               <div className="visual-corner visual-corner-br mono-label">PRECISION → PROGRESS</div>
               <div className="workflow-card">
                 <span className="mono-label workflow-label">LIVE WORKFLOW</span>
@@ -275,7 +274,7 @@ export default function Home() {
                   className={`service-card ${isActive ? "is-active" : ""}`}
                   onMouseEnter={() => setActiveService(service.title)}
                   onFocus={() => setActiveService(service.title)}
-                  onClick={() => service.title === "AI data services" ? window.location.assign("/services/ai-data-annotation") : setActiveService(service.title)}
+                  onClick={() => service.title === "AI Annotation" ? window.location.assign("/services/ai-data-annotation") : setActiveService(service.title)}
                   aria-pressed={isActive}
                 >
                   <div className="service-topline">

@@ -12,7 +12,7 @@ export default function SiteFooter() {
     </div>
     <div className="global-footer-column">
       <span className="mono-label">COMPANY</span>
-      <Link href="/about-us">About us</Link>
+      <Link href="/overview">About us</Link>
       <Link href="/engagement-models">Engagement models</Link>
       <Link href="/case-studies">Case studies</Link>
       <Link href="/blog">Blog</Link>

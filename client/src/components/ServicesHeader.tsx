@@ -7,7 +7,7 @@ const companyGroups = [
   {
     title: "About us",
     items: [
-      { label: "Overview", href: "/about-us" },
+      { label: "Overview", href: "/overview" },
       { label: "Social Impact", href: "/social-impact" },
       { label: "Engagement models", href: "/engagement-models" },
       { label: "Case studies", href: "/case-studies" },

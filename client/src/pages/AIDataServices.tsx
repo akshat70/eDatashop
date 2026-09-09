@@ -1,5 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import { Link } from "wouter";
+import ctaImage from "./images/ai-data.jpg"
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -158,13 +159,17 @@ export default function AIDataServices() {
           </div>
         </section>
 
-        <section className="service-proof-section section-pad section-grey">
+        <section className="service-proof-3-section section-pad section-grey">
           <div className="contact-block">
             <h2>Signal<br /><em>over volume.</em></h2>
           </div>
           <div className="proof-copy">
             <p>Whether you are training an embodied agent, evaluating a multilingual assistant, or preparing a computer vision model for production, the goal is the same: data that reflects the world your system will actually enter.</p>
-            <a href="/contact-us" className="text-link">Build your data program <ArrowUpRight size={17} /></a></div>
+            <a href="/contact-us" className="text-link">Build your data program <ArrowUpRight size={17} /></a>
+          </div>
+          <div className="proof-visual">
+            <img src={ctaImage} alt="Abstract orange model core with data streams and neural pathways" />
+          </div>
         </section>
       </main>
 

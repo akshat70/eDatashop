@@ -24,7 +24,7 @@ const capabilities = [
   ["Workflow automation", "Custom workflows that improve efficiency and reduce turnaround time.", GitBranch],
 ];
 
-export default function AboutUs() {
+export default function OverView() {
   return <div className="about-page">
     <ServicesHeader />
     <main>
@@ -32,7 +32,7 @@ export default function AboutUs() {
         <div className="about-hero-copy">
           <nav className="breadcrumbs">
             <Link href="/">Home</Link>
-            <span>/</span><strong>About Us</strong>
+            <span>/</span><strong>Overview</strong>
           </nav>
           <h1>A trusted data solutions partner <em>delivering accuracy since 1996.</em></h1>
           <p>What began as data entry services has evolved into a full-scale data transformation capability, combining OCR, AI, and machine learning to process complex information at scale.</p>
@@ -53,7 +53,6 @@ export default function AboutUs() {
           <div className="about-art-node node-c">
             <ArrowUpRight size={17} />IMPACT
           </div>
-          <div className="art-caption mono-label">CYBERDATA INDIA / 1996—2026</div>
         </div>
       </section>
       <section className="about-intro section-pad section-white">

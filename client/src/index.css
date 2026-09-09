@@ -116,7 +116,7 @@ a { color: inherit; text-decoration: none; }
 .menu-toggle { display: none; background: transparent; padding: 0.25rem; color: var(--ink); }
 
 .section-pad { padding: 4rem max(2rem, calc((100vw - 76rem) / 2)); }
-.hero-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(27.5rem, .92fr); gap: 5rem; min-height: 41.875rem; align-items: center; padding-top: 5rem; padding-bottom: 5rem; }
+.hero-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(27.5rem, .92fr); gap: 5rem; align-items: center; padding-top: 5rem; padding-bottom: 5rem; }
 .hero-copy { max-width: 38.125rem; padding-left: 0.1875rem; }
 .eyebrow-row { display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1.75rem; }
 .eyebrow-dot { width: 0.4375rem; height: 0.4375rem; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 5px rgba(241,90,36,.11); }
@@ -230,10 +230,10 @@ h1 em, h2 span { color: var(--orange); font-style: normal; }
 .dark-link { color: #2c160d; border-color: #2c160d; font-size: 0.6875rem; }
 .dark-link:hover { color: white; border-color: white; }
 
-.contact-section { padding-top: 4rem; padding-bottom: 4rem; background: var(--ink); color: var(--paper-white); }
+.contact-section { padding-top: 4rem; padding-bottom: 4rem; background: var(--primary); color: var(--paper-white); }
 .contact-block { display: flex; align-items: flex-end; justify-content: space-between; gap: 2.5rem; }
-.contact-block p { margin: 0; color: #aaa69d; font-size: 0.875rem; line-height: 1.5; }
-.button-dark { background: var(--orange); color: white; white-space: nowrap; }
+.contact-block p { margin: 0; color: white; font-size: 0.875rem; line-height: 1.5; }
+.button-dark { background: white; color: var(--ink); white-space: nowrap; }
 .button-dark:hover { background: white; color: var(--ink); transform: translateY(-0.125rem); }
 
 .site-footer { padding: 2.6875rem max(2rem, calc((100vw - 76rem) / 2)) 1.4375rem; background: var(--ink); color: white; border-top: 1px solid #3f3f3a; }
@@ -396,12 +396,12 @@ h1 em, h2 span { color: var(--orange); font-style: normal; }
 .workflow-step h3 { margin: 0 0 0.375rem; font-size: 1.25rem; letter-spacing: -.05em; }
 .workflow-step p { max-width: 26.25rem; margin: 0; color: var(--muted-ink); font-size: 0.75rem; line-height: 1.5; }
 .workflow-step > svg { color: var(--orange); }
-.service-proof-3-section { display: grid; grid-template-columns: .85fr 1fr .95fr; gap: 3.625rem; align-items: end; }
+.service-proof-3-section { display: grid; grid-template-columns: .85fr 1fr .95fr; gap: 3.625rem; align-items: center; }
 .service-proof-section { display: grid; grid-template-columns: .85fr 1fr; gap: 3.625rem; align-items: end; }
 .proof-stat > span { color: var(--orange); }
 .proof-copy { max-width: 30.625rem; }
 .proof-copy p { margin: 0 0 1.5625rem; color: var(--muted-ink); font-size: 1rem; line-height: 1.6; }
-.proof-visual { position: relative; min-height: 14.6875rem; overflow: hidden; background: #e8e4da; }
+.proof-visual { position: relative; min-height: 14.6875rem; overflow: hidden; background: #e8e4da; border-radius: 1rem}
 .proof-visual img { width: 100%; height: 100%; min-height: 14.6875rem; display: block; object-fit: cover; }
 .proof-visual-label { position: absolute; left: 0.9375rem; bottom: 0.875rem; padding: 0.375rem 0.5rem; color: var(--orange); background: rgba(255,253,250,.82); font-size: 0.5rem; }
 .service-contact-section { background: var(--ink); color: var(--paper-white); }
@@ -533,7 +533,7 @@ h1 em, h2 span { color: var(--orange); font-style: normal; }
 
 /* About Us page */
 .about-page { min-height: 100vh; background: var(--paper); color: var(--ink); }
-.about-hero, .service-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(26.875rem, .88fr); gap: 5rem; align-items: center; min-height: 39.6875rem; padding-top: 3rem; padding-bottom: 5rem; }
+.about-hero, .service-hero, .cases-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(26.875rem, .88fr); gap: 5rem; align-items: center; padding-top: 3rem; padding-bottom: 5rem; }
 .about-hero-copy { max-width: 40.3125rem; }
 .about-hero-label { display: block; margin-bottom: 1.25rem; color: var(--orange); }
 .about-hero h1 em, .about-intro-copy h2 span, .flow-section h2 span, .journey-section h2 span, .capability-section h2 span, .values-heading h2 span, .about-contact h2 em { color: var(--orange); font-style: normal; }
@@ -644,7 +644,7 @@ h1 em, h2 span { color: var(--orange); font-style: normal; }
 .fit-table a:hover { padding-left: 0.625rem; color: var(--orange); }
 .fit-table .mono-label { color: var(--orange); } .fit-table strong { font-size: 1rem; letter-spacing: -.04em; } .fit-table span:not(.mono-label) { color: var(--muted-ink); font-size: 0.6875rem; }
 .engagement-contact { background: var(--ink); color: var(--paper-white); }
-.engagement-contact h2 { max-width: 51.25rem; margin: 1.25rem 0 1.125rem; font-size: clamp(3.625rem, 8vw, 6.75rem); line-height: .87; letter-spacing: -.11em; }
+.engagement-contact h2 { margin: 1.25rem 0; font-size: clamp(3.625rem, 8vw, 6.75rem); line-height: .87; letter-spacing: -.11em; }
 .engagement-contact p { color: #aaa69d; font-size: 0.9375rem; } .engagement-contact .button { margin-top: 1.5625rem; }
 @media (max-width: 60rem) { .engagement-hero { grid-template-columns: 1fr; gap: 3.4375rem; } .engagement-hero-art { justify-self: start; max-width: 40.625rem; aspect-ratio: 1.1; } .engagement-principles { gap: 3.125rem; } }
 @media (max-width: 42.5rem) {
@@ -925,10 +925,10 @@ h1 em, h2 span { color: var(--orange); font-style: normal; }
 
 /* Case studies archive */
 .cases-page, .case-detail-page { min-height: 100vh; background: var(--paper); color: var(--ink); }
-.cases-hero { min-height: 35.625rem; display: grid; grid-template-columns: 1.28fr .72fr; gap: 6.25rem; align-items: end; padding-top: 5rem; padding-bottom: 5.3125rem; }
 .cases-hero h1 { margin: 1.25rem 0 0; font-size: clamp(3.625rem, 8vw, 6.5rem); line-height: .85; letter-spacing: -.11em; }
 .cases-hero h1 em { color: var(--orange); font-style: normal; }
-.cases-hero-aside { max-width: 22.5rem; padding-bottom: 0.5rem; } .cases-hero-aside > p { color: var(--muted-ink); font-size: 0.9375rem; line-height: 1.6; }
+.cases-hero-aside img { border-radius: 1rem; }
+.cases-hero-aside > p { color: var(--muted-ink); font-size: 0.9375rem; line-height: 1.6; }
 .cases-hero-index { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 1.75rem; border-top: 1px solid var(--line); border-left: 1px solid var(--line); } .cases-hero-index span { padding: 0.75rem; color: var(--orange); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font: 0.5rem "DM Mono", monospace; }
 .cases-archive { background: var(--paper-white); }
 .cases-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.875rem; }
@@ -1120,7 +1120,7 @@ body { font-size: var(--type-body); line-height: var(--leading-body); }
   font-size: clamp(3.125rem, 7vw, 5rem);
   line-height: 1;
   letter-spacing: -.095em;
-  /* margin: 1rem 0; */
+  margin: 1.25rem 0;
 }
 
 .contact-block h2 em {

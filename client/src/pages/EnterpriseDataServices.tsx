@@ -1,6 +1,7 @@
 import SiteFooter from "@/components/SiteFooter";
 import { Link } from "wouter";
 import { ArrowDownRight, ArrowUpRight, Boxes, Check, ChevronRight, Database, FileArchive, FileCog, GitBranch, Search, ShieldCheck, type LucideIcon } from "lucide-react";
+import ctaImage from "./images/enterprise-data.jpg";
 import ServicesHeader from "@/components/ServicesHeader";
 
 const services = [
@@ -18,10 +19,57 @@ const services = [
 const workflow = [["01", "Map the information", "We understand your documents, systems, constraints, and the decisions the data needs to support."], ["02", "Build the operating layer", "Specialists and technology create a repeatable workflow for conversion, enrichment, and processing."], ["03", "Deliver with control", "Structured outputs, QA, auditability, and secure handoff keep enterprise data moving with confidence."]];
 
 export default function EnterpriseDataServices() {
-  return <div className="service-page"><div className="announcement-bar"><span className="mono-label announcement-label">ENTERPRISE DATA OPERATIONS</span><span>Make information easier to find, trust, and use.</span><a href="/contact-us" className="announcement-link">Start a conversation <ArrowUpRight size={14} /></a></div><ServicesHeader />
-    <main><section className="service-hero section-pad enterprise-hero"><div className="service-hero-copy"><Link href="/" className="back-link"><ArrowUpRight size={15} className="back-icon" /> All services</Link><span className="service-hero-label mono-label">03 / ENTERPRISE DATA, DOCUMENT & DIGITIZATION</span><h1>Make enterprise information <em>work harder.</em></h1><p>From paper archives to modern data platforms, we make the information inside your organization more accessible, structured, and ready for action.</p><div className="service-hero-actions"><a className="button button-primary" href="/contact-us">Discuss your data <ArrowUpRight size={17} /></a><a className="text-link" href="#services">Explore services <ArrowDownRight size={17} /></a></div></div><div className="service-hero-art enterprise-art"><div className="enterprise-stack"><div><FileArchive size={24} /><span>ARCHIVE</span></div><div><FileCog size={24} /><span>PROCESS</span></div><div><Database size={24} /><span>DATASET</span></div></div><div className="enterprise-ring" /><div className="art-caption mono-label">ENTERPRISE LAYER / ED-003</div></div></section>
-      <section id="services" className="service-list-section section-pad section-white"><div className="service-section-heading"><div><span className="mono-label accent-label">The category</span><h2>Turn information into <span>infrastructure.</span></h2></div><p>Build the dependable layer beneath better decisions, better service, and better AI. Our teams support the full journey from source document to usable enterprise data.</p></div><div className="category-service-grid enterprise-grid">{services.map(([number, IconComponent, title, description, capabilities]) => { const Icon = IconComponent as LucideIcon; return <article className="category-service-card" key={number as string}><div className="category-card-top"><span className="mono-label">{number as string}</span><Icon size={21} strokeWidth={1.5} /></div><span className="service-card-kicker">Enterprise information layer</span><h3>{title as string}</h3><p>{description as string}</p><ul>{(capabilities as string[]).map((capability) => <li key={capability}><Check size={14} />{capability}</li>)}</ul><a href="/contact-us" className="category-card-link">Explore this service <ChevronRight size={16} /></a></article>; })}</div></section>
+  return <div className="service-page">
+    <div className="announcement-bar">
+      <span className="mono-label announcement-label">ENTERPRISE DATA OPERATIONS</span>
+      <span>Make information easier to find, trust, and use.</span>
+      <a href="/contact-us" className="announcement-link">Start a conversation <ArrowUpRight size={14} /></a>
+    </div>
+
+    <ServicesHeader />
+
+    <main>
+      <section className="service-hero section-pad enterprise-hero">
+        <div className="service-hero-copy">
+          <nav className="breadcrumbs">
+            <Link href="/">Home</Link><span>/</span><strong>Enterprise Data, Document & Digitization Services</strong>
+          </nav>
+          <h1>Make enterprise information <em>work harder.</em></h1>
+          <p>From paper archives to modern data platforms, we make the information inside your organization more accessible, structured, and ready for action.</p>
+          <div className="service-hero-actions">
+            <a className="button button-primary" href="/contact-us">Discuss your data <ArrowUpRight size={17} /></a>
+            <a className="text-link" href="#services">Explore services <ArrowDownRight size={17} /></a>
+          </div>
+        </div>
+        <div className="service-hero-art enterprise-art">
+          <div className="enterprise-stack">
+            <div>
+              <FileArchive size={24} />
+              <span>ARCHIVE</span>
+            </div>
+            <div><FileCog size={24} /><span>PROCESS</span></div>
+            <div><Database size={24} /><span>DATASET</span></div>
+          </div>
+          <div className="enterprise-ring" />
+        </div>
+      </section>
+      <section id="services" className="service-list-section section-pad section-white">
+        <div className="service-section-heading">
+          <div>
+            <h2>Turn information into <span>infrastructure.</span></h2></div><p>Build the dependable layer beneath better decisions, better service, and better AI. Our teams support the full journey from source document to usable enterprise data.</p></div><div className="category-service-grid enterprise-grid">{services.map(([number, IconComponent, title, description, capabilities]) => { const Icon = IconComponent as LucideIcon; return <article className="category-service-card" key={number as string}><div className="category-card-top"><span className="mono-label">{number as string}</span><Icon size={21} strokeWidth={1.5} /></div><span className="service-card-kicker">Enterprise information layer</span><h3>{title as string}</h3><p>{description as string}</p><ul>{(capabilities as string[]).map((capability) => <li key={capability}><Check size={14} />{capability}</li>)}</ul><a href="/contact-us" className="category-card-link">Explore this service <ChevronRight size={16} /></a></article>; })}</div></section>
       <section id="method" className="service-method-section section-pad"><div className="method-intro">
         <h2>Less friction between <span>information and action.</span></h2><p>Enterprise data work only creates value when it fits the way people, systems, and decisions actually operate. We design for that reality from the start.</p></div><div className="workflow-list">{workflow.map(([number, title, description]) => <div className="workflow-step" key={number}><span className="workflow-number mono-label">{number}</span><div><h3>{title}</h3><p>{description}</p></div><ArrowUpRight size={17} /></div>)}</div></section>
-      <section className="service-proof-section section-pad section-grey"><div className="proof-stat"><span className="mono-label">WHAT WE OPTIMIZE FOR</span><strong>Clarity<br /><em>at scale.</em></strong></div><div className="proof-copy"><p>Good enterprise data is quieter, faster, and more reliable. It gives teams the confidence to move without second-guessing the information underneath.</p><a href="/contact-us" className="text-link">Improve your data layer <ArrowUpRight size={17} /></a></div></section><section id="contact" className="service-contact-section section-pad"><span className="mono-label contact-label">READY WHEN YOU ARE</span><h2>Make your data <em>easier to use.</em></h2><p>Bring us a messy archive, a migration, or a system that needs a better data layer.</p><a className="button button-dark" href="mailto:info@edatashop.com?subject=Enterprise%20Data%20Services">info@edatashop.com <ArrowUpRight size={18} /></a></section></main><SiteFooter /></div>;
+      <section className="service-proof-3-section section-pad section-grey">
+        <div className="contact-block">
+          <h2>Clarity<br /><em>at scale.</em></h2>
+        </div>
+        <div className="proof-copy">
+          <p>Good enterprise data is quieter, faster, and more reliable. It gives teams the confidence to move without second-guessing the information underneath.</p>
+          <a href="/contact-us" className="text-link">Improve your data layer <ArrowUpRight size={17} /></a>
+        </div>
+        <div className="proof-visual">
+          <img src={ctaImage} alt="Abstract orange model core with data streams and neural pathways" />
+        </div>
+      </section>
+    </main><SiteFooter /></div>;
 }

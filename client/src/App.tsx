@@ -10,7 +10,7 @@ import AIDataServices from "./pages/AIDataServices";
 import GenerativeAIServices from "./pages/GenerativeAIServices";
 import EnterpriseDataServices from "./pages/EnterpriseDataServices";
 import AcademicHeritageServices from "./pages/AcademicHeritageServices";
-import AboutUs from "./pages/AboutUs";
+import OverView from "./pages/OverView";
 import EngagementModels from "./pages/EngagementModels";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -37,7 +37,7 @@ function Router() {
       <Route path={"/services/generative-ai-llm-model"} component={GenerativeAIServices} />
       <Route path={"/services/enterprise-data-document-digitization"} component={EnterpriseDataServices} />
       <Route path={"/services/academic-research-cultural-heritage"} component={AcademicHeritageServices} />
-      <Route path={"/about-us"} component={AboutUs} />
+      <Route path={"/overview"} component={OverView} />
       <Route path={"/engagement-models"} component={EngagementModels} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/:slug"} component={BlogPost} />

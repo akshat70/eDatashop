@@ -1,5 +1,6 @@
 import SiteFooter from "@/components/SiteFooter";
 import { Link } from "wouter";
+import ctaImage from "./images/generative-ai-support.jpg"
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -109,7 +110,6 @@ export default function GenerativeAIServices() {
             <div className="model-core"><BrainCircuit size={40} strokeWidth={1.2} /><span className="mono-label">MODEL / 02</span></div>
             <div className="model-token token-one">{`{ }`}</div><div className="model-token token-two">01</div><div className="model-token token-three">AI</div><div className="model-token token-four">↗</div>
             <div className="model-chip chip-one"><Sparkles size={15} /><span>GENERATE</span></div><div className="model-chip chip-two"><ShieldAlert size={15} /><span>ALIGN</span></div><div className="model-chip chip-three"><FlaskConical size={15} /><span>EVALUATE</span></div>
-            <div className="art-caption mono-label">MODEL LAYER / GL-002</div>
           </div>
         </section>
 
@@ -135,8 +135,7 @@ export default function GenerativeAIServices() {
             <a href="/contact-us" className="text-link">Build your AI program <ArrowUpRight size={17} /></a>
           </div>
           <div className="proof-visual">
-            <img src="/manus-storage/generative-ai-support_c338dc50.png" alt="Abstract orange model core with data streams and neural pathways" />
-            <span className="proof-visual-label mono-label">MODEL SIGNAL / 02</span>
+            <img src={ctaImage} alt="Abstract orange model core with data streams and neural pathways" />
           </div>
         </section>
       </main>
