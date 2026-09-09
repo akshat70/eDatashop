@@ -65,7 +65,7 @@ export default function EngagementModels() {
       <section id="contact" className="contact-section section-pad">
           <div className="contact-block">
             <div>
-              <h2>Build the right team for the <em>work ahead.</em></h2>
+              <h2>Build the right team for the work ahead.</h2>
               <p>Tell us what you need to deliver, and we&apos;ll help you find the cleanest way to get there.</p>
             </div>
             <a className="button button-dark" href="/contact-us">
