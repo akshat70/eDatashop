@@ -10,11 +10,36 @@ import AIDataServices from "./pages/AIDataServices";
 import GenerativeAIServices from "./pages/GenerativeAIServices";
 import EnterpriseDataServices from "./pages/EnterpriseDataServices";
 import AcademicHeritageServices from "./pages/AcademicHeritageServices";
+import GenerativeAI from "./pages/GenerativeAI";
+import SocialImpact from "./pages/SocialImpact";
+import AIModelEvaluation from "./pages/AIModelEvaluation";
+import AISafetyRedTeaming from "./pages/AISafetyRedTeaming";
+import CustomMLTailoredSoftware from "./pages/CustomMLTailoredSoftware";
+import LLMData from "./pages/LLMData";
+import RLHFAlignment from "./pages/RLHFAlignment";
 import OverView from "./pages/OverView";
 import EngagementModels from "./pages/EngagementModels";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import ContactUs from "./pages/ContactUs";
+import EgocentricData from "./pages/EgocentricData";
+import EnterpriseDocumentDigitizationOCR from "./pages/EnterpriseDocumentDigitizationOCR";
+import DataConversionContentTransformation from "./pages/DataConversionContentTransformation";
+import MetadataEnrichmentDataCleansing from "./pages/MetadataEnrichmentDataCleansing";
+import DataEngineeringETL from "./pages/DataEngineeringETL";
+import DataMigrationWarehousing from "./pages/DataMigrationWarehousing";
+import KnowledgeGraphsTaxonomyDevelopment from "./pages/KnowledgeGraphsTaxonomyDevelopment";
+import RetrievalAugmentedGenerationSupport from "./pages/RetrievalAugmentedGenerationSupport";
+import IntelligentDataProcessingRecordsManagement from "./pages/IntelligentDataProcessingRecordsManagement";
+import DigitisationAnthropologicalArchives from "./pages/DigitisationAnthropologicalArchives";
+import AIForCulturalHeritage from "./pages/AIForCulturalHeritage";
+import AIAnnotation from "./pages/AIAnnotation";
+import DocumentAI from "./pages/DocumentAI";
+import ComputerVision from "./pages/ComputerVision";
+import MultilingualAI from "./pages/MultilingualAI";
+import SyntheticDataGeneration from "./pages/SyntheticDataGeneration";
+import SpeechLanguageAI from "./pages/SpeechLanguageAI";
+import AgenticAI from "./pages/AgenticAI";
 import ServiceDetail from "./pages/ServiceDetail";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
@@ -42,7 +67,32 @@ function Router() {
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/:slug"} component={BlogPost} />
       <Route path={"/contact-us"} component={ContactUs} />
-      <Route path={"/service/:slug"} component={ServiceDetail} />
+      <Route path={"/social-impact"} component={SocialImpact} />
+      <Route path={"/service/egocentric-data"} component={EgocentricData} />
+      <Route path={"/service/enterprise-document-digitization-ocr"} component={EnterpriseDocumentDigitizationOCR} />
+      <Route path={"/service/data-conversion-content-transformation"} component={DataConversionContentTransformation} />
+      <Route path={"/service/metadata-enrichment-data-cleansing"} component={MetadataEnrichmentDataCleansing} />
+      <Route path={"/service/data-engineering-etl"} component={DataEngineeringETL} />
+      <Route path={"/service/data-migration-warehousing"} component={DataMigrationWarehousing} />
+      <Route path={"/service/knowledge-graphs-taxonomy-development"} component={KnowledgeGraphsTaxonomyDevelopment} />
+      <Route path={"/service/rag-support"} component={RetrievalAugmentedGenerationSupport} />
+      <Route path={"/service/intelligent-data-processing-records-management"} component={IntelligentDataProcessingRecordsManagement} />
+      <Route path={"/service/digitisation-anthropological-archives"} component={DigitisationAnthropologicalArchives} />
+      <Route path={"/service/ai-for-cultural-heritage"} component={AIForCulturalHeritage} />
+      <Route path={"/service/document-ai-idp"} component={DocumentAI} />
+      <Route path={"/service/ai-annotation"} component={AIAnnotation} />
+      <Route path={"/service/computer-vision"} component={ComputerVision} />
+      <Route path={"/service/multilingual-ai-datasets-localization"} component={MultilingualAI} />
+      <Route path={"/service/synthetic-data-generation"} component={SyntheticDataGeneration} />
+      <Route path={"/service/generative-ai"} component={GenerativeAI} />
+      <Route path={"/service/ai-model-evaluation"} component={AIModelEvaluation} />
+      <Route path={"/service/ai-safety-red-teaming-content-moderation"} component={AISafetyRedTeaming} />
+      <Route path={"/service/custom-ml-tailored-software-development"} component={CustomMLTailoredSoftware} />
+      <Route path={"/service/llm-data"} component={LLMData} />
+      <Route path={"/service/rlhf-ai-alignment"} component={RLHFAlignment} />
+      <Route path={"/service/speech-language-ai"} component={SpeechLanguageAI} />
+      <Route path={"/service/agentic-ai"} component={AgenticAI} />
+      {/* <Route path={"/service/:slug"} component={ServiceDetail} /> */}
       <Route path={"/case-studies"} component={CaseStudies} />
       <Route path={"/case-studies/:slug"} component={CaseStudyDetail} />
       <Route path={"/privacy-policy"} component={PrivacyPolicy} />

@@ -1,3 +1,15 @@
+import blog1 from "../pages/images/blog1.webp";
+import blog2 from "../pages/images/blog2.webp";
+import blog3 from "../pages/images/blog3.webp";
+import blog4 from "../pages/images/blog4.webp";
+import blog5 from "../pages/images/blog5.webp";
+import blog6 from "../pages/images/blog6.webp";
+import blog7 from "../pages/images/blog7.webp";
+import blog8 from "../pages/images/blog8.webp";
+import blog9 from "../pages/images/blog9.webp";
+import blog10 from "../pages/images/blog10.webp";
+import blog11 from "../pages/images/blog11.webp";
+
 export type BlogArticle = {
   slug: string;
   title: string;
@@ -13,7 +25,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Achieving High Accuracy at Low Costs: The Power of Data Entry Outsourcing",
     category: "Data operations",
     date: "August 21, 2025",
-    image: "/manus-storage/blog-data-operations_885c3952.png",
+    image: blog1,
     content: `# Achieving High Accuracy at Low Costs: The Power of Data Entry Outsourcing
 
 In today’s data-driven business environment, accurate data entry is crucial for informed decision-making and operational efficiency. However, maintaining high accuracy in data entry can be resource-intensive. Outsourcing data entry tasks, particularly to countries like India, offers a strategic solution by combining cost-effectiveness with high-quality outcomes.
@@ -50,7 +62,7 @@ Outsourcing data entry services to India presents a viable strategy for business
     title: "Ensuring Data Security in Data Entry Outsourcing: Best Practices and Precautions",
     category: "Security",
     date: "August 21, 2025",
-    image: "/manus-storage/blog-data-security_8395a396.png",
+    image: blog2,
     content: `# Ensuring Data Security in Data Entry Outsourcing: Best Practices and Precautions
 
 In today’s digital landscape, outsourcing data entry tasks has become a common practice for organizations seeking efficiency and cost-effectiveness. However, entrusting sensitive information to external vendors introduces potential data security risks. Ensuring the confidentiality, integrity, and availability of data is paramount.
@@ -87,7 +99,7 @@ Data security in outsourcing is not just a technical issue but a comprehensive a
     title: "Enhancing Data Accuracy: Single Entry vs. Double Entry Methods",
     category: "Quality",
     date: "August 21, 2025",
-    image: "/manus-storage/blog-data-operations_885c3952.png",
+    image: blog3,
     content: `# Enhancing Data Accuracy: Single Entry vs. Double Entry Methods
 
 In the realm of data entry, accuracy is paramount. Businesses rely on precise data to make informed decisions, maintain customer trust, and comply with regulatory standards. Two prevalent methods employed to ensure data accuracy are Single Entry and Double Entry. Understanding the differences between these methods can help organizations choose the most suitable approach for their data entry needs.
@@ -147,7 +159,7 @@ Both Single and Double Entry methods have their merits and are suitable for diff
     title: "Safeguarding Your Data: Best Practices for Secure Transmission in Data Entry Outsourcing",
     category: "Security",
     date: "August 21, 2025",
-    image: "/manus-storage/blog-data-security_8395a396.png",
+    image: blog4,
     content: `# Safeguarding Your Data: Best Practices for Secure Transmission in Data Entry Outsourcing
 
 In the realm of data entry outsourcing, the secure transmission of sensitive information is paramount. Whether dealing with financial records, medical documents, or proprietary business data, ensuring that this information remains confidential during transfer is crucial. This blog outlines essential precautions and best practices to protect your data throughout the outsourcing process.
@@ -186,7 +198,7 @@ Secure data transmission is a critical component of successful data entry outsou
     title: "Mastering Handwritten Data Entry: Best Practices for Accuracy and Efficiency",
     category: "Data operations",
     date: "August 21, 2025",
-    image: "/manus-storage/blog-ocr-documents_4cc6e836.png",
+    image: blog5,
     content: `# Mastering Handwritten Data Entry: Best Practices for Accuracy and Efficiency
 
 In the digital age, businesses often encounter the challenge of digitizing handwritten forms and documents. Whether it’s historical records, customer feedback forms, or medical documents, accurately converting handwritten data into digital format is crucial. This blog explores effective strategies to enhance the accuracy and efficiency of handwritten data entry.
@@ -228,7 +240,7 @@ Effectively entering handwritten forms and documents requires a combination of s
     title: "Streamlining Operations: A Comprehensive Guide to Outsourcing Forms Processing",
     category: "Workflow",
     date: "August 21, 2025",
-    image: "/manus-storage/blog-data-operations_885c3952.png",
+    image: blog6,
     content: `# Streamlining Operations: A Comprehensive Guide to Outsourcing Forms Processing
 
 In today’s data-driven business environment, efficient and accurate forms processing is crucial. Outsourcing this task can offer significant advantages, including cost savings, enhanced accuracy, and improved turnaround times. However, to maximize these benefits, it’s essential to understand the processes involved and implement best practices.
@@ -285,7 +297,7 @@ Outsourcing forms processing can be a strategic move to enhance operational effi
     title: "Outsourcing Form Data Entry: Strategies for Cost Control and Quality Assurance",
     category: "Quality",
     date: "August 21, 2025",
-    image: "/manus-storage/blog-data-security_8395a396.png",
+    image: blog7,
     content: `# Outsourcing Form Data Entry: Strategies for Cost Control and Quality Assurance
 
 In today’s data-driven business environment, efficient and accurate form data entry is crucial. Outsourcing this task can offer significant advantages, including cost savings, enhanced accuracy, and improved turnaround times. However, to maximize these benefits, it’s essential to implement strategies that control costs and ensure quality.
@@ -343,7 +355,7 @@ Outsourcing form data entry services can be a strategic move to enhance operatio
     title: "To Outsource Data Entry or Not: Making the Right Choice for Your Business",
     category: "Strategy",
     date: "August 21, 2025",
-    image: "/manus-storage/blog-data-operations_885c3952.png",
+    image: blog8,
     content: `# To Outsource Data Entry or Not: Making the Right Choice for Your Business
 
 In today’s competitive business landscape, organizations often face the critical decision of whether to handle data entry tasks in-house or to outsource them to specialized service providers. This choice can significantly impact operational efficiency, cost structures, and overall business strategy. Understanding the advantages and disadvantages of outsourcing data entry is essential for making an informed decision.
@@ -392,7 +404,7 @@ Deciding whether to outsource data entry is multifaceted, involving careful eval
     title: "Ethical Outsourcing: Ensuring Fair Labor Practices in Data Entry Services",
     category: "People",
     date: "August 21, 2025",
-    image: "/manus-storage/blog-data-operations_885c3952.png",
+    image: blog9,
     content: `# Ethical Outsourcing: Ensuring Fair Labor Practices in Data Entry Services
 
 In the globalized economy, outsourcing data entry services has become a common practice for businesses seeking efficiency and cost-effectiveness. However, it’s crucial to ensure that these outsourcing endeavors uphold ethical labor standards, providing fair and humane working conditions for all employees involved.
@@ -423,7 +435,7 @@ Ethical outsourcing is not just a moral obligation but a strategic decision that
     title: "Empowering Communities Through Data Entry Services in India",
     category: "India",
     date: "August 21, 2025",
-    image: "/manus-storage/blog-data-operations_885c3952.png",
+    image: blog10,
     content: `# Empowering Communities Through Data Entry Services in India
 
 India has emerged as a global hub for data entry services, offering cost-effective and high-quality solutions to businesses worldwide. Beyond the economic advantages, the data entry industry in India plays a significant role in social empowerment, particularly through initiatives aimed at uplifting underprivileged communities.
@@ -455,7 +467,7 @@ The data entry industry in India exemplifies how business operations can align w
     title: "Clean Images: Precision OCR for Data Conversion",
     category: "OCR & digitisation",
     date: "October 13, 2025",
-    image: "/manus-storage/blog-ocr-documents_4cc6e836.png",
+    image: blog11,
     content: `# Clean Images: Precision OCR for Data Conversion
 
 In the digital age, the transition from physical documents to digital formats is essential for accessibility and efficiency. Optical Character Recognition (OCR) technology facilitates this by converting scanned images into editable text. However, the quality of the scanned images significantly influences the accuracy of OCR results.

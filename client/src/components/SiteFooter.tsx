@@ -15,7 +15,7 @@ export default function SiteFooter() {
       <Link href="/overview">About us</Link>
       <Link href="/engagement-models">Engagement models</Link>
       <Link href="/case-studies">Case studies</Link>
-      <Link href="/blog">Blog</Link>
+      <Link href="/blog">Blogs</Link>
       <Link href="/faq">FAQ</Link>
     </div>
     <div className="global-footer-column">

@@ -112,6 +112,7 @@ export default function ServicesHeader({ compact = false }: { compact?: boolean 
           <button className={`services-trigger ${activeMenu === "services" ? "is-open" : ""}`} onClick={() => toggleMenu("services")} aria-expanded={activeMenu === "services"}>
             Services <ChevronDown size={15} />
           </button>
+          <Link href="/contact-us" className="services-trigger">Contact Us</Link>
         </nav>
         <a className="header-cta project-cta" href="mailto:info@edatashop.com?subject=Website%20enquiry">Let&apos;s talk <ArrowUpRight size={16} /></a>
         <button className="menu-toggle services-menu-toggle" onClick={() => toggleMenu("services")} aria-label="Toggle menu" aria-expanded={activeMenu === "services"}>{activeMenu === "services" ? <X size={22} /> : <span className="menu-bars"><i /><i /><i /></span>}</button>
