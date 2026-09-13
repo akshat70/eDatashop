@@ -10,6 +10,7 @@ import lidar3dPointCloudAnnotation from "@/lib/images/lidar-3d-point-cloud-annot
 export type CaseStudy = {
   slug: string;
   title: string;
+  subheading: string;
   subtitle: string;
   category: string;
   client: string;
@@ -25,6 +26,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "amazon-ebook-production",
     title: "Amazon eBook Production, FLHT, FLTP & Arabic Books",
+    subheading: "From complex layouts and multilingual content to accessible, reflowable eBooks",
     subtitle: "Engineering complex fixed-layout content for an enhanced digital reading experience.",
     category: "Digital Publishing",
     client: "Amazon eBook production ecosystem",
@@ -38,6 +40,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "xml-markup-structured-content",
     title: "XML Markup & Structured Content Transformation",
+    subheading: "Transforming unstructured content into XML-based, structured, and reusable data",
     subtitle: "Transforming unstructured documents into intelligent, reusable digital content.",
     category: "Content Transformation",
     client: "Publishers, archives, and knowledge platforms",
@@ -52,6 +55,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "aerobotics-orchard-mapping",
     title: "Aerobotics, Orchard Mapping Using Drone Imagery",
     subtitle: "Transforming aerial agricultural imagery into AI-ready orchard intelligence.",
+    subheading: "Accurate data extraction and mapping from drone imagery to drive precision agriculture.",
     category: "Computer Vision",
     client: "Aerobotics / agricultural AI initiative",
     image: aeroboticsOrchardMapping,
@@ -64,6 +68,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "poll-survey-research-processing",
     title: "Poll Survey Analysis & Research Data Processing",
+    subheading: "Turning complex survey data into accurate insights for informed decision making.",
     subtitle: "Turning complex survey material into structured research intelligence.",
     category: "Research Data",
     client: "Renowned university, USA",
@@ -77,6 +82,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "facial-impression-survey",
     title: "Facial Impression Survey",
+    subheading: "Capturing first impressions and analysing facial responses for research insights.",
     subtitle: "Capturing first impressions and analysing facial responses for research insights.",
     category: "Human Preference Data",
     client: "Behavioural research engagement",
@@ -90,6 +96,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "patient-care-feedback-digitization",
     title: "Digitization of Patient Care Feedback Forms",
+    subheading: "Converting paper feedback into structured, actionable data.",
     subtitle: "Converting paper feedback into structured, actionable healthcare data.",
     category: "Healthcare Digitization",
     client: "UK-based healthcare services firm",
@@ -103,6 +110,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "first-person-pov-data-capture",
     title: "First-Person POV Data Capture for Robotics & Embodied AI",
+    subheading: "Capturing real-world human perspective data to train and validate next-generational AI models.",
     subtitle: "Capturing the physical world from a human perspective to train the next generation of AI.",
     category: "Embodied AI",
     client: "Robotics and physical-AI programs",
@@ -116,6 +124,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "lidar-3d-point-cloud-annotation",
     title: "LiDAR & 3D Point Cloud Annotation",
+    subheading: "High-precision 3D annotation for autonomous systems, mapping and simulation.",
     subtitle: "Building spatial intelligence for autonomous vehicles, robotics, and physical AI.",
     category: "3D Annotation",
     client: "Autonomous and robotic perception programs",

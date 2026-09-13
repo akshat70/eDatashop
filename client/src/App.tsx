@@ -19,7 +19,7 @@ import LLMData from "./pages/LLMData";
 import RLHFAlignment from "./pages/RLHFAlignment";
 import OverView from "./pages/OverView";
 import EngagementModels from "./pages/EngagementModels";
-import Blog from "./pages/Blog";
+import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
 import ContactUs from "./pages/ContactUs";
 import EgocentricData from "./pages/EgocentricData";
@@ -43,7 +43,7 @@ import AgenticAI from "./pages/AgenticAI";
 import ServiceDetail from "./pages/ServiceDetail";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Policies from "./pages/Policies";
 import TermsConditions from "./pages/TermsConditions";
 import FAQ from "./pages/FAQ";
 
@@ -58,14 +58,15 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/policies"} component={Policies} />
       <Route path={"/services/ai-data-annotation"} component={AIDataServices} />
       <Route path={"/services/generative-ai-llm-model"} component={GenerativeAIServices} />
       <Route path={"/services/enterprise-data-document-digitization"} component={EnterpriseDataServices} />
       <Route path={"/services/academic-research-cultural-heritage"} component={AcademicHeritageServices} />
       <Route path={"/overview"} component={OverView} />
       <Route path={"/engagement-models"} component={EngagementModels} />
-      <Route path={"/blog"} component={Blog} />
-      <Route path={"/blog/:slug"} component={BlogPost} />
+      <Route path={"/blogs"} component={Blogs} />
+      <Route path={"/blogs/:slug"} component={BlogPost} />
       <Route path={"/contact-us"} component={ContactUs} />
       <Route path={"/social-impact"} component={SocialImpact} />
       <Route path={"/service/egocentric-data"} component={EgocentricData} />
@@ -95,7 +96,6 @@ function Router() {
       {/* <Route path={"/service/:slug"} component={ServiceDetail} /> */}
       <Route path={"/case-studies"} component={CaseStudies} />
       <Route path={"/case-studies/:slug"} component={CaseStudyDetail} />
-      <Route path={"/privacy-policy"} component={PrivacyPolicy} />
       <Route path={"/terms-and-conditions"} component={TermsConditions} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/404"} component={NotFound} />

@@ -7,6 +7,31 @@ import eurekaForbes from "./images/eureka-forbes.webp";
 import shine from "./images/shine.webp";
 import collegesource from "./images/college-source.webp";
 import eBooks from "./images/eBooks.webp";
+import harvardUniversity from "./images/harvard-university.png";
+import princetonUniversity from "./images/princeton-university.png";
+import oxfordUniversity from "./images/oxford-university.png";
+import cambridgeUniversity from "./images/cambridge-university.jpg";
+import cornellUniversity from "./images/cornell-university.png";
+import nebraskaLincolnUniversity from "./images/nebraska-lincoln-university.png";
+import swanseaUniversity from "./images/swansea-university.png";
+import walesUniversity from "./images/wales-university.png";
+import mennomedia from "./images/mennomedia.png";
+import concordiaPublishingHouse from "./images/concordia-publishing-house.jpg";
+import caltech from "./images/caltech.png";
+import ancestry from "./images/ancestry.png";
+import amazon from "./images/amazon.jpg";
+import acculynx from "./images/acculynx.png";
+import oracle from "./images/oracle.png";
+import aerobotics from "./images/aerobotics.png";
+import atlas from "./images/atlas-capture.jpg";
+import mecka from "./images/mecka.png";
+import hindustanTimes from "./images/hindustan-times.png";
+import nic from "./images/nic.png";
+import cci from "./images/cci.png";
+import ranbaxy from "./images/ranbaxy.jpg";
+import epch from "./images/epch.jpg";
+import inc from "./images/inc.jpg";
+import thomsonPress from "./images/thomson-press.jpg";
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -94,11 +119,36 @@ const processSteps = [
 ];
 
 const clientLogos = [
+  { name: "Harvard University", src: harvardUniversity },
+  { name: "Princeton University", src: princetonUniversity },
+  { name: "Oxford University", src: oxfordUniversity },
+  { name: "Cambridge University", src: cambridgeUniversity },
+  { name: "Cornell University", src: cornellUniversity },
+  { name: "University of Nebraska–Lincoln", src: nebraskaLincolnUniversity },
+  { name: "Swansea University", src: swanseaUniversity },
+  { name: "Wales University", src: walesUniversity },
+  { name: "Menno Media", src: mennomedia },
+  { name: "Concordia Publishing House", src: concordiaPublishingHouse },
+  { name: "Caltech", src: caltech },
+  { name: "Ancestry", src: ancestry },
+  { name: "Amazon", src: amazon },
+  { name: "Acculynx", src: acculynx },
+  { name: "Oracle", src: oracle },
+  { name: "Aerobotics", src: aerobotics },
+  { name: "Atlas", src: atlas },
+  { name: "Mecka", src: mecka },
+  { name: "eBooks", src: eBooks },
+  { name: "FireFly", src: fireFly },
+  { name: "Hindustan Times", src: hindustanTimes },
+  { name: "NIC", src: nic },
+  { name: "CCI", src: cci },
+  { name: "Ranbaxy", src: ranbaxy },
+  { name: "EPCH", src: epch },
+  { name: "INC", src: inc },
+  { name: "Thomson Press", src: thomsonPress },
   { name: "CollegeSource", src: collegesource },
   { name: "PCRA", src: pcra },
-  { name: "FireFly", src: fireFly },
   { name: "Eureka Forbes", src: eurekaForbes },
-  { name: "eBooks", src: eBooks },
   { name: "Shine", src: shine },
 ];
 

@@ -7,10 +7,16 @@ import { caseStudies, getCaseStudy } from "@/lib/caseStudies";
 export default function CaseStudyDetail() {
   const [, params] = useRoute("/case-studies/:slug");
   const study = getCaseStudy(params?.slug ?? "");
-  if (!study) return <div className="case-detail-page"><ServicesHeader /><main className="not-found-state"><span className="mono-label accent-label">CASE STUDY NOT FOUND</span><h1>That project is not in the current collection.</h1><Link href="/case-studies" className="button button-primary">View all case studies <ArrowUpRight size={17} /></Link></main></div>;
+  if (!study) return <div className="case-detail-page"><ServicesHeader />
+  <main className="not-found-state"><span className="mono-label accent-label">CASE STUDY NOT FOUND</span><h1>That project is not in the current collection.</h1><Link href="/case-studies" className="button button-primary">View all case studies <ArrowUpRight size={17} /></Link></main></div>;
   const related = caseStudies.filter((item) => item.slug !== study.slug).slice(0, 3);
   return <div className="case-detail-page"><ServicesHeader />
-    <main><section className="case-detail-hero section-pad"><nav className="case-breadcrumbs"><Link href="/">Home</Link><span>/</span><Link href="/case-studies">Case studies</Link><span>/</span><strong>{study.title}</strong></nav><div className="case-detail-heading"><div><h1>{study.title}</h1></div><div className="case-client"><span className="mono-label">ENGAGEMENT</span><strong>{study.client}</strong><p>{study.subtitle}</p></div></div><a className="case-detail-image" href={study.image} target="_blank" rel="noreferrer"><img src={study.image} alt={`${study.title} source and output case-study visual`} /><span>View full image <ArrowUpRight size={15} /></span></a></section>
+    <main><section className="case-detail-hero section-pad"><nav className="case-breadcrumbs"><Link href="/">Home</Link><span>/</span><Link href="/case-studies">Case studies</Link><span>/</span><strong>{study.title}</strong></nav>
+    <div className="case-detail-heading">
+      <div>
+        <h1>{study.title}</h1>
+        <p>{study.subheading}</p>
+        </div><div className="case-client"><span className="mono-label">ENGAGEMENT</span><strong>{study.client}</strong><p>{study.subtitle}</p></div></div><a className="case-detail-image" href={study.image} target="_blank" rel="noreferrer"><img src={study.image} alt={`${study.title} source and output case-study visual`} /><span>View full image <ArrowUpRight size={15} /></span></a></section>
       <section className="case-story section-pad section-white">
         <div className="case-story-main">
           <section>

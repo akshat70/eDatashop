@@ -9,15 +9,15 @@ const companyGroups = [
     items: [
       { label: "Overview", href: "/overview" },
       { label: "Social Impact", href: "/social-impact" },
-      { label: "Engagement models", href: "/engagement-models" },
-      { label: "Case studies", href: "/case-studies" },
-      { label: "Blogs", href: "/blog" },
+      { label: "Engagement Models", href: "/engagement-models" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Blogs", href: "/blogs" },
     ],
   },
   {
     title: "Resources",
     items: [
-      { label: "Egocentric data Samples", href: "/engagement-models" },
+      { label: "Egocentric Data Samples", href: "/egocentric-data-samples" },
       { label: "SIT/NER OTS Data", href: "/sit-ner-ots-data" },
     ],
   },
@@ -52,6 +52,7 @@ export default function ServicesHeader({ compact = false }: { compact?: boolean 
   const [activeMenu, setActiveMenu] = useState<"company" | "services" | null>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const companyButtonRef = useRef<HTMLButtonElement>(null);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [companyMenuPosition, setCompanyMenuPosition] = useState<{ left: number; top: number } | null>(null);
 
   useEffect(() => {
@@ -95,9 +96,31 @@ export default function ServicesHeader({ compact = false }: { compact?: boolean 
     });
   }, [activeMenu]);
 
+  const clearCloseTimer = () => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+
   const toggleMenu = (menu: "company" | "services") => {
+    clearCloseTimer();
     setActiveMenu((current) => (current === menu ? null : menu));
   };
+
+  const handleMouseEnter = (menu: "company" | "services") => {
+    clearCloseTimer();
+    setActiveMenu(menu);
+  };
+
+  const handleMouseLeave = (menu: "company" | "services") => {
+    clearCloseTimer();
+    closeTimerRef.current = setTimeout(() => {
+      setActiveMenu((current) => (current === menu ? null : current));
+    }, 120);
+  };
+
+  useEffect(() => () => clearCloseTimer(), []);
 
   return (
     <div className="header-shell" ref={headerRef}>
@@ -106,10 +129,23 @@ export default function ServicesHeader({ compact = false }: { compact?: boolean 
           <img className="brand-logo" src={brandLogo} alt="DataShop, Data · AI · Impact" />
         </Link>
         <nav className="primary-nav" aria-label="Primary navigation">
-          <button ref={companyButtonRef} className={`services-trigger ${activeMenu === "company" ? "is-open" : ""}`} onClick={() => toggleMenu("company")} aria-expanded={activeMenu === "company"}>
+          <button
+            ref={companyButtonRef}
+            className={`services-trigger ${activeMenu === "company" ? "is-open" : ""}`}
+            onMouseEnter={() => handleMouseEnter("company")}
+            onMouseLeave={() => handleMouseLeave("company")}
+            onClick={() => toggleMenu("company")}
+            aria-expanded={activeMenu === "company"}
+          >
             Company <ChevronDown size={15} />
           </button>
-          <button className={`services-trigger ${activeMenu === "services" ? "is-open" : ""}`} onClick={() => toggleMenu("services")} aria-expanded={activeMenu === "services"}>
+          <button
+            className={`services-trigger ${activeMenu === "services" ? "is-open" : ""}`}
+            onMouseEnter={() => handleMouseEnter("services")}
+            onMouseLeave={() => handleMouseLeave("services")}
+            onClick={() => toggleMenu("services")}
+            aria-expanded={activeMenu === "services"}
+          >
             Services <ChevronDown size={15} />
           </button>
           <Link href="/contact-us" className="services-trigger">Contact Us</Link>
@@ -117,32 +153,49 @@ export default function ServicesHeader({ compact = false }: { compact?: boolean 
         <a className="header-cta project-cta" href="mailto:info@edatashop.com?subject=Website%20enquiry">Let&apos;s talk <ArrowUpRight size={16} /></a>
         <button className="menu-toggle services-menu-toggle" onClick={() => toggleMenu("services")} aria-label="Toggle menu" aria-expanded={activeMenu === "services"}>{activeMenu === "services" ? <X size={22} /> : <span className="menu-bars"><i /><i /><i /></span>}</button>
       </header>
-      {activeMenu === "company" && companyMenuPosition && <div className="services-mega-menu company-mega-menu" style={{ left: companyMenuPosition.left }}>
-        <div className="company-menu-shell">
-          <div className="company-menu-grid">
-            {companyGroups.map((group) => (
-              <div className="company-menu-column" key={group.title}>
-                <h3>{group.title}</h3>
-                <div className="company-menu-links">
+      {activeMenu === "company" && companyMenuPosition && (
+        <div
+          className="services-mega-menu company-mega-menu"
+          style={{ left: companyMenuPosition.left }}
+          onMouseEnter={() => handleMouseEnter("company")}
+          onMouseLeave={() => handleMouseLeave("company")}
+        >
+          <div className="company-menu-shell">
+            <div className="company-menu-grid">
+              {companyGroups.map((group) => (
+                <div className="company-menu-column" key={group.title}>
+                  <h3>{group.title}</h3>
+                  <div className="company-menu-links">
+                    {group.items.map((item) => (
+                      <Link href={item.href} key={item.label} onClick={() => setActiveMenu(null)}>{item.label}</Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+      {activeMenu === "services" && (
+        <div
+          className="services-mega-menu"
+          onMouseEnter={() => handleMouseEnter("services")}
+          onMouseLeave={() => handleMouseLeave("services")}
+        >
+          <div className="mega-menu-inner">
+            {serviceGroups.map((group) => (
+              <div className="mega-group" key={group.title}>
+                <Link href={group.href} className="mega-group-title" onClick={() => setActiveMenu(null)}>{group.title}</Link>
+                <div className="mega-group-items">
                   {group.items.map((item) => (
-                    <Link href={item.href} key={item.label} onClick={() => setActiveMenu(null)}>{item.label}</Link>
+                    <Link href={`/service/${serviceSlug(item)}`} key={item} onClick={() => setActiveMenu(null)}>{item}</Link>
                   ))}
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>}
-      {activeMenu === "services" && <div className="services-mega-menu">
-        <div className="mega-menu-inner">
-          {serviceGroups.map((group) => <div className="mega-group" key={group.title}>
-            <Link href={group.href} className="mega-group-title" onClick={() => setActiveMenu(null)}>{group.title}</Link>
-            <div className="mega-group-items">
-              {group.items.map((item) => <Link href={`/service/${serviceSlug(item)}`} key={item} onClick={() => setActiveMenu(null)}>{item}</Link>)}
-            </div>
-          </div>)}
-        </div>
-      </div>}
+      )}
     </div>
   );
 }

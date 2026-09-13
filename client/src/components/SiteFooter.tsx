@@ -15,7 +15,7 @@ export default function SiteFooter() {
       <Link href="/overview">About us</Link>
       <Link href="/engagement-models">Engagement models</Link>
       <Link href="/case-studies">Case studies</Link>
-      <Link href="/blog">Blogs</Link>
+      <Link href="/blogs">Blogs</Link>
       <Link href="/faq">FAQ</Link>
     </div>
     <div className="global-footer-column">
@@ -33,7 +33,7 @@ export default function SiteFooter() {
     </div>
     <div className="global-footer-column">
       <span className="mono-label">LEGAL</span>
-      <Link href="/privacy-policy">Privacy policy</Link>
+      <Link href="/policies">Policies</Link>
       <Link href="/terms-and-conditions">Terms & conditions</Link>
     </div>
   </div>
